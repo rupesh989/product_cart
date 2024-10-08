@@ -1,0 +1,81 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-bar {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .sort-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .cart-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cart-button:hover {
+    background-color: #0056b3;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa; /* Example background */
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input,
+  .sort-select,
+  .currency-select,
+  .cart-button {
+    margin: 0 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  .cart-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Additional styles as needed */
+  

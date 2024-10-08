@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+.cart-page {
+  padding: 20px;
+}
+
+.cart-page h2 {
+  font-size: 24px;
+}
+
+.cart-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-page li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-page li img {
+  margin-right: 20px;
+}
+
+.cart-page li span {
+  flex-grow: 1;
+}
+
+.cart-page input[type="number"] {
+  width: 50px;
+}
