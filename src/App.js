@@ -12,12 +12,17 @@ function App() {
   const [currency, setCurrency] = useState('USD'); // Currency state
   const [exchangeRate, setExchangeRate] = useState(1); // For currency conversion
 
+  // Fetch exchange rate based on selected currency
   useEffect(() => {
     const fetchExchangeRate = async () => {
       if (currency === 'INR') {
-        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); // Example API
-        const data = await response.json();
-        setExchangeRate(data.rates.INR); // Set exchange rate to INR
+        try {
+          const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); // Example API
+          const data = await response.json();
+          setExchangeRate(data.rates.INR); // Set exchange rate for INR
+        } catch (error) {
+          console.error('Error fetching exchange rate:', error);
+        }
       } else {
         setExchangeRate(1); // Default to USD
       }
@@ -26,6 +31,7 @@ function App() {
     fetchExchangeRate();
   }, [currency]);
 
+  // Add product to cart, or increase quantity if it already exists
   const addToCart = (product, quantity = 1) => {
     const existingProduct = cart.find((item) => item.id === product.id);
     if (existingProduct) {
@@ -39,6 +45,7 @@ function App() {
     }
   };
 
+  // Update product quantity in the cart or remove if quantity is zero
   const updateCart = (productId, newQuantity) => {
     if (newQuantity === 0) {
       setCart(cart.filter((item) => item.id !== productId));
@@ -69,7 +76,8 @@ function App() {
                 addToCart={addToCart}
                 searchTerm={searchTerm}
                 sortBy={sortBy}
-                currency={currency} // Pass currency to ProductList if needed
+                currency={currency} // Pass currency to ProductList
+                exchangeRate={exchangeRate} // Pass exchange rate to ProductList
               />
             }
           />

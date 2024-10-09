@@ -1,81 +1,122 @@
 /* Header.css */
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .controls {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .search-bar {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  
-  .sort-select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  
-  .cart-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .cart-button:hover {
-    background-color: #0056b3;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  padding-left: 35px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+}
+
+.search-bar .icon {
+  position: absolute;
+  left:180px;
+  color: #888;
+}
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sort-dropdown select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+
+.sort-dropdown .icon {
+  margin-right: 10px;
+}
+
+.currency-dropdown select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+
+.cart-button {
+  text-decoration: none;
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-btn .icon {
+  margin-right: 8px;
+}
+
+.cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f8f9fa; /* Example background */
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
   .controls {
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  
-  .search-input,
-  .sort-select,
-  .currency-select,
-  .cart-button {
-    margin: 0 5px;
-    border-radius: 4px;
-    font-size: 14px;
-    outline: none;
-    padding: 8px;
-    border: 1px solid #ccc;
+
+  .search-bar input,
+  .sort-dropdown select,
+  .currency-dropdown select {
+    width: 100%;
   }
-  
-  
-  .cart-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-  }
-  
-  /* Additional styles as needed */
-  
+}
