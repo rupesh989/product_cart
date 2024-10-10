@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import './Cart.css';  // Include CSS file for styles
+import './Cart.css';  
 
 const Cart = ({ cart, updateCart, currency }) => {
   const [exchangeRate, setExchangeRate] = useState(1);
 
   useEffect(() => {
-    // Fetch exchange rate from an API when the currency changes
     const fetchExchangeRate = async () => {
       if (currency === 'INR') {
-        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); // Example API
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD'); 
         const data = await response.json();
-        setExchangeRate(data.rates.INR);  // Set exchange rate to INR
+        setExchangeRate(data.rates.INR);  
       } else {
-        setExchangeRate(1);  // Default to USD
+        setExchangeRate(1); 
       }
     };
 

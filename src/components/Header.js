@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'; // Importing CSS for styles
-import { FaShoppingCart, FaSearch, FaSort } from 'react-icons/fa'; // Using FontAwesome icons
+import './Header.css'; 
+import { FaShoppingCart, FaSearch, FaSort } from 'react-icons/fa';
 
 const Header = ({ cartCount, setSearchTerm, setSortBy, currency, setCurrency }) => {
   return (
@@ -9,7 +9,7 @@ const Header = ({ cartCount, setSearchTerm, setSortBy, currency, setCurrency }) 
       <h1 className="logo">
         <Link to="/">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/25/25694.png" // Example icon
+            src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
             alt="Logo"
             className="logo-icon"
           /> 

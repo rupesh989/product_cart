@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Pagination from './Pagination';
 import ProductItem from './ProductItem';
-import axios from 'axios'; // Using axios for API requests
-import Footer from './Footer'; // Import Footer component
-import './ProductList.css'; // Import the CSS file for styling
+import axios from 'axios'; 
+import Footer from './Footer'; 
+import './ProductList.css';
 
 const ProductList = ({ addToCart, searchTerm, sortBy, currency }) => {
   const [products, setProducts] = useState([]);
@@ -11,12 +11,11 @@ const ProductList = ({ addToCart, searchTerm, sortBy, currency }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(6);
 
-  // Fetch products from an API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('https://fakestoreapi.com/products'); // Replace with actual API URL
+        const response = await axios.get('https://fakestoreapi.com/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -28,12 +27,10 @@ const ProductList = ({ addToCart, searchTerm, sortBy, currency }) => {
     fetchProducts();
   }, []);
 
-  // Handle currency conversion
   const convertCurrency = (price) => {
     return currency === 'INR' ? (price * 75).toFixed(2) : price.toFixed(2);
   };
 
-  // Apply search and sorting
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -45,7 +42,6 @@ const ProductList = ({ addToCart, searchTerm, sortBy, currency }) => {
     return 0;
   });
 
-  // Get current products based on pagination
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
@@ -76,7 +72,7 @@ const ProductList = ({ addToCart, searchTerm, sortBy, currency }) => {
           />
         </>
       )}
-      <Footer /> {/* Add Footer component */}
+      <Footer /> 
     </div>
   );
 };

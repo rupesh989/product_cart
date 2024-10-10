@@ -1,6 +1,4 @@
-/* ProductItem.css */
 
-/* Ensure all product images have the same size */
 .product-item {
     list-style: none;
     padding: 10px;
@@ -19,16 +17,15 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
-  /* Image resolution settings */
+  
   .product-image {
-    width: 150px; /* Fixed width for all images */
-    height: 150px; /* Fixed height for all images */
-    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
     border-radius: 5px;
     margin-bottom: 10px;
   }
   
-  /* Styling for text and buttons */
   .product-item span {
     font-size: 16px;
     margin: 5px 0;

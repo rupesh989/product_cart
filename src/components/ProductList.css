@@ -1,16 +1,15 @@
-/* General layout */
 .product-list-page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-family: 'Poppins', sans-serif; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(180deg, #f0f8ff, #e6f7ff); /* Light gradient background */
+    background: linear-gradient(180deg, #f0f8ff, #e6f7ff); 
   }
   
-  /* Product grid styles */
+  
   .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -19,7 +18,6 @@
     justify-items: center;
   }
   
-  /* Modern product card styles */
   .product-item {
     background-color: #ffffff;
     border-radius: 12px;
@@ -63,7 +61,7 @@
     margin: 10px 15px;
     font-size: 18px;
     font-weight: 600;
-    color: #ff6347; /* Tomato color for price */
+    color: #ff6347; 
   }
   
   .product-item .add-to-cart {
@@ -82,7 +80,7 @@
     background: linear-gradient(90deg, #0056b3, #003f7f);
   }
   
-  /* Pagination styles */
+  
   .pagination {
     display: flex;
     justify-content: center;
@@ -111,10 +109,9 @@
     cursor: not-allowed;
   }
   
-  /* Trending Product Item Badge */
   .product-item::before {
     content: 'Trending';
-    background-color: #ff6347; /* Tomato badge */
+    background-color: #ff6347; 
     color: white;
     font-size: 12px;
     font-weight: bold;

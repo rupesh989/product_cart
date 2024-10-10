@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductItem.css'; // Importing the CSS file
+import './ProductItem.css'; 
 
 const ProductItem = ({ product, addToCart, currency, convertCurrency }) => {
   return (

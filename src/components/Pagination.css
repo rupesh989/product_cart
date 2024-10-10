@@ -1,6 +1,4 @@
-/* Pagination.css */
 
-/* Pagination container */
 .pagination {
     display: flex;
     justify-content: center;
@@ -9,12 +7,10 @@
     margin: 0;
   }
   
-  /* Pagination list items */
   .page-item {
     margin: 0 5px;
   }
   
-  /* Pagination link styles */
   .page-link {
     display: block;
     padding: 10px 15px;
@@ -27,25 +23,21 @@
     transition: background-color 0.3s, color 0.3s;
   }
   
-  /* Hover state */
   .page-link:hover {
     background-color: #007bff;
     color: white;
   }
   
-  /* Active page */
   .page-item.active .page-link {
     background-color: #0056b3;
     color: white;
     border-color: #0056b3;
   }
   
-  /* Disable text decoration on active page */
   .page-item.active .page-link:hover {
     text-decoration: none;
   }
   
-  /* Mobile responsiveness */
   @media (max-width: 768px) {
     .page-link {
       padding: 8px 12px;
